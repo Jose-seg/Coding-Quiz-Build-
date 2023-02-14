@@ -1,0 +1,52 @@
+/*Global Declarations*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* border: 1px solid red; */
+    /*placed the default Global font*/
+    font-family: monospace;
+}
+
+body {
+    background-color: gray;
+    font-family: monospace;
+}
+
+p {
+    color: white;
+    font-size: 1.3em;
+}
+
+button {
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 1.3em;
+}
+
+/*Outer-Container */
+
+.outer-container {
+    padding: 10px;
+
+}
+
+/*top bar*/
+
+.top-bar p {
+    float: right;
+}
+
+/*inner-container*/
+
+.inner-container {
+
+}
+
+/*header > quiz intro section*/
+
+
+/*main section*/
