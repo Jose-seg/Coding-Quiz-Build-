@@ -5,32 +5,41 @@
     padding: 0;
     box-sizing: border-box;
 
-    /* border: 1px solid red; */
+    border: 1px solid red;
     /*placed the default Global font*/
     font-family: monospace;
+    color: white;
 }
 
 body {
-    background-color: gray;
+    background-color: rgb(32, 32, 32);
     font-family: monospace;
+    /* overflow: hidden; */
 }
 
 p {
-    color: white;
     font-size: 1.3em;
 }
 
 button {
     outline: none;
-    background-color: black;
+    background-color: rgb(23, 23, 24);
     color: white;
     font-size: 1.3em;
 }
 
+h1, h2 {
+    color: yellow
+}
+
 /*Outer-Container */
 
-.outer-container {
+.primary-container {
     padding: 10px;
+    height: 100vh;
+    display: flex; /*Made outer div into flex so inner div height can fit 100%*/
+    flex-direction: column;
+    justify-content: start;
 
 }
 
@@ -42,11 +51,19 @@ button {
 
 /*inner-container*/
 
-.inner-container {
-
+ .inner-container {
+  background: rgb(18, 18, 19);
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/*header > quiz intro section*/
+/*Quiz intro (header)*/
+.quiz-intro {
+    margin-bottom: 25vh;
+}
 
-
-/*main section*/
+/*main content of quiz*/
