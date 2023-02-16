@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /*placed the default Global font*/
     font-family: monospace;
     color: white;
@@ -29,7 +29,13 @@ button {
 }
 
 h1, h2 {
-    color: yellow
+    color: yellow;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+
 }
 
 /*Outer-Container */
@@ -62,8 +68,41 @@ h1, h2 {
 }
 
 /*Quiz intro (header)*/
-.quiz-intro {
-    margin-bottom: 25vh;
+.quiz-intro, main {
+    display: none;
+    margin-bottom: 30vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(32, 32, 32);
+}
+
+.quiz-intro p {
+    text-align: center;
+}
+
+.quiz-intro button {
+    display: block;
+    margin: 0 auto;
 }
 
 /*main content of quiz*/
+main {
+    display: block;
+}
+
+.question-display {
+   display: none;
+}
+
+.finish-screen {
+    display: none;
+}
+
+.highscores {
+    display: block;
+}
+
+.highscores ol{
+    overflow-y: scroll;
+    max-height: 200px;
+}
