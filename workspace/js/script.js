@@ -71,7 +71,7 @@ let choiceQue = document.querySelectorAll('.choice_que');
 
 
 let index = 0;
-let timer = 25;
+let timer = 10;
 let interval = 0;
 
 
@@ -99,7 +99,8 @@ start.addEventListener('click', ()=>{
 let countDown = ()=>{
     if(timer === 0) {
         clearInterval(interval);
-        next_question.click();
+        quizOver();
+        console.log('done')
     }
     else {
         timer--;
@@ -119,7 +120,7 @@ let loadData = ()=>{
     option4.innerText = MCQS[index].choice4;
 
     // Timer start
-    timer = 10;
+    // timer = 10;
     
 }
 
@@ -197,12 +198,9 @@ next_question.addEventListener('click', ()=>{
 });
 
 function quizOver(){
-    if(timer === 0 || index === MCQS.length){
         quiz.style.display = 'none';
         result.style.display = 'block';
-    }else {
-        index = 0;
-    }
+    
 };
 
 
