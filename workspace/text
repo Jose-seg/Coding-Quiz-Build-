@@ -1,0 +1,10 @@
+Questions to ask for web quiz
+
+prompt: "The push() method does what in Javascript?\n(a) It doesn't do anything\n\ (b) It adds a element to the end of an Array\n(c) That's not in Javascript\n(d) It pushes a new element to the begininng of an Array",
+answer: 'b'
+
+prompt: "What does a function do?\n(a) It tells Javascript to store a value\n(b) It ensures the data is secured\n(c) a set of statements that performs a task or calculates a value\n(d) Its the function of a conjunction",
+answer: 'c'
+
+prompt:
+answer:
