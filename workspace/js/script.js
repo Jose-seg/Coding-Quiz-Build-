@@ -4,28 +4,28 @@ let MCQS = [{
     choice2: 'It pushes a new element at the end of an array ',
     choice3: 'It is used to store values in a variable',
     choice4: 'It splits an array into two',
-    answer: 1 
+    answer: 0
 },{
     question: 'What does the pop() method do in Javascript?' ,
     choice1: 'Removes first element of an array',
     choice2: 'Removes last element of an array',
     choice3: 'It copies an array',
     choice4: 'It splits an array into two',
-    answer: 2 
+    answer: 1
 },{
     question: 'What operator is this called i++?' ,
     choice1: 'Postwick Operator',
     choice2: 'Increment Operator',
     choice3: 'Postfix Operator',
     choice4: 'Double Incomplete',
-    answer: 3 
+    answer: 2
 },{
     question: 'What do if/else statement do?' ,
-    choice1: 'Executes code if condition is true or false',
+    choice1: 'Executes code if condition is undefined',
     choice2: 'A questioning of reality',
-    choice3: 'Manipulates the DOM',
-    choice4: 'Executes code if condition is undefined',
-    answer: 1
+    choice3: 'Manipulates the DOM', 
+    choice4: 'Executes code if condition is true or false',
+    answer: 3
 }];
 
 // Start Ssection 
@@ -71,7 +71,7 @@ let choiceQue = document.querySelectorAll('.choice_que');
 
 
 let index = 0;
-let timer = 10;
+let timer = 16;
 let interval = 0;
 
 
@@ -162,11 +162,13 @@ choiceQue.forEach( (choices,choiceNo) =>{
             choiceQue[i].classList.add('disabled');
          }
     })
+    
 });
 
 
 // This should add functionality to the next button so the player can proceed
 next_question.addEventListener('click', ()=>{
+    console.log(correct, 'correct next_question eventlistener')
     // For if index is less than the length of MCQS
     if(index !== MCQS.length - 1) {
         index++;
@@ -174,7 +176,12 @@ next_question.addEventListener('click', ()=>{
             removeActive.classList.remove('active');
     })
 
-    //question
+    //added this for trying to fix my problem regarding the last answer not being recognized
+    if(index === MCQS.length -1) {
+        choiceQue.forEach(removeActive => {
+            removeActive.classList.remove('active');
+        })
+    }
     loadData();
 
     //timer
@@ -201,6 +208,14 @@ function quizOver(){
         quiz.style.display = 'none';
         result.style.display = 'block';
     
+};
+
+// function for decrementing timer if wrong answer is picked
+function timeLoss(){
+    if(choiceNo !== MCQS[index].answer){
+        timer--;
+        setInterval(countDown, -2000);
+    }
 };
 
 
