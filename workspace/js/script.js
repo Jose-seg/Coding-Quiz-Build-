@@ -140,7 +140,7 @@ continueBtn.addEventListener('click', ()=>{
 
     })
 
-    total_correct.innerHTML = '${correct} out of $ {MCQS.length} right';
+    // total_correct.innerHTML = '${correct} out of $ {MCQS.length} right';
 });
 
 choiceQue.forEach( (choices,choiceNo) =>{
@@ -179,7 +179,7 @@ next_question.addEventListener('click', ()=>{
 
     //timer
     // result.style.display = 'block';
-    // points.innerHTML = '${correct} out of ${MCQS.length} right';
+    points.innerHTML = `${correct} out of ${MCQS.length} right`;
     clearInterval(interval);
     interval = setInterval(countDown, 1000);
    }
