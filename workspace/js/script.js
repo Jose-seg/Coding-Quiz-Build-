@@ -217,6 +217,29 @@ function timeLoss(){
 };
 
 
+// result form for submit initials and score
+var form = document.getElementById('form')
+
+form.addEventListener('submit', function(event){
+    event.preventDefault() // prevents the form from auto submitting
+
+    var initials = document.getElementById('initials').value
+
+    console.log(initials)
+
+    var finalScore = document.getElementById('finalScore').value
+
+    console.log(finalScore);
+
+    form.append('Score: ')
+    form.append(initials);
+    form.append('\n');
+    form.append(finalScore);
+
+
+});
+
+
 
 
 
