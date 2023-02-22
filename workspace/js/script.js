@@ -99,7 +99,7 @@ start.addEventListener('click', ()=>{
 let countDown = ()=>{
     if(timer === 0) {
         clearInterval(interval);
-        quizOver();
+        quizOver(); // callback the function quizOver to allow the game to end when timer reaches zero
         console.log('done')
     }
     else {
@@ -168,9 +168,12 @@ choiceQue.forEach( (choices,choiceNo) =>{
 });
 
 
-// This should add functionality to the next button so the player can proceed
+// This should add functionality to the choices so the next question is presented when the a choice is clicked
+choiceQue.forEach( (next_question,choiceNo) => { 
 next_question.addEventListener('click', ()=>{
-    console.log(correct, 'correct next_question eventlistener')
+    next_question.classList.add('active');
+    // console.log(correct, 'correct next_question eventlistener')
+
     // For if index is less than the length of MCQS
     if(index !== MCQS.length - 1) {
         index++;
@@ -178,16 +181,7 @@ next_question.addEventListener('click', ()=>{
             removeActive.classList.remove('active');
     })
 
-    //added this for trying to fix my problem regarding the last answer not being recognized
-    // if(index < MCQS.length) {
-    //     index++;
-    //     choiceQue.forEach(removeActive => {
-    //         removeActive.classList.remove('active');
-    //     });
-    
     loadData();
-
-    //timer
 
 }
    else{
@@ -205,8 +199,9 @@ next_question.addEventListener('click', ()=>{
     choiceQue[i].classList.remove('disabled');
  }
     
+})
 });
-
+// function for when the timer is up the quiz is over 
 function quizOver(){
         quiz.style.display = 'none';
         result.style.display = 'block';
@@ -220,30 +215,6 @@ function timeLoss(){
       interval =  setInterval(countDown, - 2000);
     }
 };
-
-
-// result form for submit initials and score
-var form = document.getElementById('form')
-
-form.addEventListener('submit', function(event){
-    event.preventDefault() // prevents the form from auto submitting
-
-    var initials = document.getElementById('initials').value
-
-    console.log(initials)
-
-    var finalScore = document.getElementById('finalScore').value
-
-    console.log(finalScore);
-
-    form.append('Score: ')
-    form.append(initials);
-    form.append('\n');
-    form.append(finalScore);
-
-
-});
-    
 
 
 

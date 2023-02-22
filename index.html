@@ -15,10 +15,10 @@
     <!--Guide Section-->
     <div id="guide">
         <h2>Quiz guide</h2>
-        <h4>1. You have 16 seconds to answer each question</h4>
+        <h4>1. You have 15 seconds to complete the quiz</h4>
         <h4>2. Once you picked your answer it can't be undone</h4>
         <h4>3. Any wrong answers will decrement the timer</h4>
-        <h4>4. If you run out of time or finish then the quiz is over</h4>
+        <h4>4. If you run out of time or finish the quiz submit your score</h4>
         <div id="button">
             <!-- <button id="exit">Exit</button> -->
             <button id="continue">continue</button>
@@ -42,27 +42,35 @@
 
     <!--Quiz Choices-->    
     <div id="optionList">
-        <h4 class="choice_que" id="option1"></h4>
-        <h4 class="choice_que" id="option2"></h4>
-        <h4 class="choice_que" id="option3"></h4>
-        <h4 class="choice_que" id="option4"></h4>
+        <h4 class="choice_que" id="option1">
+            <button id="next_question"></button><!--makes the choices buttons the when clicked present the next question-->
+        </h4>
+        <h4 class="choice_que" id="option2">
+            <button id="next_question"></button><!--makes the choices buttons the when clicked present the next question-->
+        </h4>
+        <h4 class="choice_que" id="option3">
+            <button id="next_question"></button><!--makes the choices buttons the when clicked present the next question-->
+        </h4>
+        <h4 class="choice_que" id="option4">
+            <button id="next_question"></button><!--makes the choices buttons the when clicked present the next question-->
+        </h4>
     </div>
     <!--Answer Section-->
-    <div id="nextSection">
-        <h3 id="total_correct">0 of 4 questions</h3>
+    <!-- <div id="nextSection">
+        <h3 id="total_correct">3 of 4 questions</h3>
         <h3 id="next_question">Next</h3>
-    </div>
+    </div> -->
       </div>
     <!--Result Section-->
     <div id="result">
         <h6>You completed the quiz!</h6>
-        <h6 id="points">You got 0 of 4 right</h6>
+        <h6 id="points">You got 0 of 4 </h6>
         <!-- <button id="tryAgain">Try Again</button> -->
         <form id="form">
           <input type="text" id="initials" placeholder='Initials' required>
           <br>
           <input type="text" id="finalScore" placeholder="Final Score"  required>
-          <input type="submit" value="register">
+          <input type="submit" value="submit">
         </form>
     </div>
     </div>
