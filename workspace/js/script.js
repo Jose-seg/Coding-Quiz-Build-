@@ -62,7 +62,7 @@ let next_question = document.querySelector('#next_question');
 // Result Section
 let result = document.querySelector('#result');
 let points = document.querySelector('#points');
-let tryAgainBtn = document.querySelector('#tryAgain');
+// let tryAgainBtn = document.querySelector('#tryAgain');
 let scoreSubmit = document.querySelector('#scoreSubmit');
 let scoreBtn = document.querySelector('.highscore');
 
@@ -106,6 +106,7 @@ let countDown = ()=>{
         timer--;
         time.innerText = timer;
     };
+    timeLoss();
 }
 
 // setInterval(countDown, 1000);
@@ -153,6 +154,7 @@ choiceQue.forEach( (choices,choiceNo) =>{
         }
          else {
             correct+= 0;
+            
          }
          // counter stop
         //  clearInterval(interval);
@@ -177,19 +179,17 @@ next_question.addEventListener('click', ()=>{
     })
 
     //added this for trying to fix my problem regarding the last answer not being recognized
-    if(index === MCQS.length -1) {
-        choiceQue.forEach(removeActive => {
-            removeActive.classList.remove('active');
-        })
-    }
+    // if(index < MCQS.length) {
+    //     index++;
+    //     choiceQue.forEach(removeActive => {
+    //         removeActive.classList.remove('active');
+    //     });
+    
     loadData();
 
     //timer
-    // result.style.display = 'block';
-    points.innerHTML = `${correct} out of ${MCQS.length} right`;
-    clearInterval(interval);
-    interval = setInterval(countDown, 1000);
-   }
+
+}
    else{
     index = 0;
 
@@ -197,6 +197,9 @@ next_question.addEventListener('click', ()=>{
     // clearInterval(interval);
     quiz.style.display = 'none';
     result.style.display = 'block';
+    points.innerHTML = `${correct} out of ${MCQS.length} right`;
+    clearInterval(interval);
+    interval = setInterval(countDown, 1000);
    }
    for(i = 0; i <= 3; i++) {
     choiceQue[i].classList.remove('disabled');
@@ -213,8 +216,8 @@ function quizOver(){
 // function for decrementing timer if wrong answer is picked
 function timeLoss(){
     if(choiceNo !== MCQS[index].answer){
-        timer--;
-        setInterval(countDown, -2000);
+        // timer--;
+      interval =  setInterval(countDown, - 2000);
     }
 };
 
