@@ -7,14 +7,11 @@ In this assigment we needed to create a web quiz using html, css, and javascript
 The usage of the web quiz app is to give the user (myself) a method of studying the things I've learned in the course. At the moment the quiz has only 4 questions I do plan on adding more once I get the free time and knowledge to do so. This is intended to be a test run for a better quiz i intend to make. 
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/122575280/220480424-0d0f7109-8933-44cb-93a1-7077bd6a3d7b.png)
-![image](https://user-images.githubusercontent.com/122575280/220480476-6a03f06c-bde1-4806-8069-c21330b5b6cd.png)
-![image](https://user-images.githubusercontent.com/122575280/220480559-74482981-b351-4b7d-9e0d-86f6ab6acc8d.png)
-![image](https://user-images.githubusercontent.com/122575280/220480634-4eb29810-cf25-4a18-a5f9-cefaefe1ceef.png)
-![image](https://user-images.githubusercontent.com/122575280/220480705-f699542f-9118-4841-8ea8-8d14658faa48.png)
-![image](https://user-images.githubusercontent.com/122575280/220480868-8fb70e67-9179-4d1b-a5c9-0c4f33c227d2.png)
-![image](https://user-images.githubusercontent.com/122575280/220480954-a3262e8b-e869-45f0-b42b-c95154610e8c.png)
-
+![image](https://user-images.githubusercontent.com/122575280/220765779-72257d8f-d588-4c24-86ed-2c9c30933b7c.png)
+![image](https://user-images.githubusercontent.com/122575280/220765840-8ad9fd99-1901-4fcb-9329-d3f55765b362.png)
+![image](https://user-images.githubusercontent.com/122575280/220765937-d9af2587-63be-4622-9dc7-a8155e856a5f.png)
+![image](https://user-images.githubusercontent.com/122575280/220766057-bd714693-16f3-4db4-b279-7fb6fbf725a7.png)
+![image](https://user-images.githubusercontent.com/122575280/220766151-af58489a-174f-49bd-a898-3595eaee13d1.png)
 ## Deployment
 Deployed site: https://jose-seg.github.io/Coding-Quiz-Build-/
 
