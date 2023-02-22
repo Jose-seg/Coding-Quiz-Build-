@@ -16,7 +16,7 @@ The usage of the web quiz app is to give the user (myself) a method of studying 
 ![image](https://user-images.githubusercontent.com/122575280/220480954-a3262e8b-e869-45f0-b42b-c95154610e8c.png)
 
 ## Deployment
-
+Deployed site: https://jose-seg.github.io/Coding-Quiz-Build-/
 
 ## Github Repo
 https://github.com/Jose-seg/Coding-Quiz-Build-
