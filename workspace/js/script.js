@@ -106,8 +106,14 @@ let countDown = ()=>{
         timer--;
         time.innerText = timer;
     };
-    timeLoss();
+    
 }
+
+function wrongAnswer() {
+    timer -= 2;
+    console.log(`Wrong answer! Time left: ${timeLeft}`);
+  }
+  
 
 // setInterval(countDown, 1000);
 
@@ -151,9 +157,12 @@ choiceQue.forEach( (choices,choiceNo) =>{
         if(choiceNo === MCQS[index].answer)
         {
             correct++;
+            alert('correct');
         }
          else {
             correct+= 0;
+            wrongAnswer();
+            clearInterval(interval);
             
          }
          // counter stop
